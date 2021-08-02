@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   // 'h2 { font-weight: normal; color: blue}']
 })
 export class AppComponent {
-  colors = ["blue", "red", "green"]
+  colors = ["blue", "red", "green", "orange", "red"]
 }

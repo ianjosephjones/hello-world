@@ -1,6 +1,17 @@
 <h1>My favorite colors</h1>
-
+<!-- *ngIf and *ngFor -->
 <span *ngIf="colors.length === 0">I dont have any favorite colors</span>
 <ul>
   <li *ngFor="let c of colors">{{ c }}</li>
+</ul>
+
+<!--  -->
+
+<ul>
+  <li *ngFor="let color of colors" [ngSwitch]="color">
+    {{ color }}
+    <span *ngSwitchCase="'blue'"> Is my favorite</span>
+    <span *ngSwitchCase="'red'">My least favorite</span>
+    <span *ngSwitchDefault>N/a</span>
+  </li>
 </ul>
