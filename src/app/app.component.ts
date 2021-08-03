@@ -8,11 +8,12 @@ import { Component } from '@angular/core';
   // 'h2 { font-weight: normal; color: blue}']
 })
 export class AppComponent {
-  colors = ["blue", "red", "orange"]
-
-  styleFive = {
-    'font-size' : '4px',
-    'background-color' : 'yellow'
-
+  title = 'appComponent';
+    
+  showColor = false;
+   
+  changeColor() {
+    this.showColor = !this.showColor;
+    console.log("click")
   }
 }

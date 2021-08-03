@@ -1,35 +1,24 @@
-<h1>My favorite colors</h1>
-<!-- *ngIf and *ngFor -->
-<span *ngIf="colors.length === 0">I dont have any favorite colors</span>
-<ul>
-  <li *ngFor="let c of colors">{{ c }}</li>
-</ul>
-
-<!-- Styling  -->
-
-<ul>
-  <li *ngFor="let color of colors" [ngSwitch]="color">
-    {{ color }}
-
-    <span [style]="{ color: color, fontWeight: 'bold' }">
-      <span *ngSwitchCase="'blue'"> Is my favorite</span>
-      <span *ngSwitchCase="'red'">My least favorite</span>
-      <span *ngSwitchDefault>Doesn't apply</span>
-    </span>
-    <span [style]="{ color: 'blue' }">This is span two</span>
-    <span [style.color]="'red'">This is span two</span>
-  </li>
-</ul>
-
-<h1 class="red">My favorite colors</h1>
-
-<ul>
-  <li *ngFor="let color of colors" [ngSwitch]="color">
-    <div class="red">One {{ color }}</div>
-    <div [class]="color">Two {{ color }}</div>
-    <div [class.blue]="true">Three {{ color }}</div>
-    <div [class.blue]="true" [class.big]="'0'">Four {{ color }}</div>
-    <div [ngStyle]="styleFive">Five {{ color }}</div>
-    <div [ngClass]="{ red: true, blue: false, big: true }">Six {{ color }}</div>
-  </li>
-</ul>
+<div>
+  <h3>This is an Attribute Directives</h3>
+  <span [class.red]="true">Attibute Change </span>
+  <br />
+  <span [ngClass]="{ blue: true }"> Attribute change by using NgCLass </span>
+  <br />
+  <span [ngStyle]="{ 'font-size': '14px', color: 'green' }"
+    >Attribute change by Using ngStyle</span
+  >
+  <br /><br />
+  <span [class.cyan]="showColor">Attribute Change</span>
+  <br />
+  <span [ngClass]="{ brown: showColor }">
+    Attribute change by using ngClass
+  </span>
+  <br />
+  <input type="button" value="Change Color" (click)="changeColor()" />
+  <br /><br />
+  <span [class.cyan]="showColor">Attribute change</span>
+  <br />
+  <span [ngClass]="{ cyan: showColor, red: !showColor }">
+    Attribute change by using ngClass
+  </span>
+</div>
