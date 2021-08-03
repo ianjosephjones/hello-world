@@ -10,8 +10,13 @@
 <ul>
   <li *ngFor="let color of colors" [ngSwitch]="color">
     {{ color }}
-    <span *ngSwitchCase="'blue'"> Is my favorite</span>
-    <span *ngSwitchCase="'red'">My least favorite</span>
-    <span *ngSwitchDefault>N/a</span>
+
+    <span [style]="{ color: color, fontWeight: 'bold' }">
+      <span *ngSwitchCase="'blue'"> Is my favorite</span>
+      <span *ngSwitchCase="'red'">My least favorite</span>
+      <span *ngSwitchDefault>Doesn't apply</span>
+    </span>
+    <span [style]="{ color: 'blue' }">This is span two</span>
+    <span [style.color]="'red'">This is span two</span>
   </li>
 </ul>
