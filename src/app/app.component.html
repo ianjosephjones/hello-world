@@ -5,7 +5,7 @@
   <li *ngFor="let c of colors">{{ c }}</li>
 </ul>
 
-<!--  -->
+<!-- Styling  -->
 
 <ul>
   <li *ngFor="let color of colors" [ngSwitch]="color">
@@ -18,5 +18,18 @@
     </span>
     <span [style]="{ color: 'blue' }">This is span two</span>
     <span [style.color]="'red'">This is span two</span>
+  </li>
+</ul>
+
+<h1 class="red">My favorite colors</h1>
+
+<ul>
+  <li *ngFor="let color of colors" [ngSwitch]="color">
+    <div class="red">One {{ color }}</div>
+    <div [class]="color">Two {{ color }}</div>
+    <div [class.blue]="true">Three {{ color }}</div>
+    <div [class.blue]="true" [class.big]="'0'">Four {{ color }}</div>
+    <div [ngStyle]="styleFive">Five {{ color }}</div>
+    <div [ngClass]="{ red: true, blue: false, big: true }">Six {{ color }}</div>
   </li>
 </ul>

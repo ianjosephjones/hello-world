@@ -1,14 +1,26 @@
 h1 {
-    color: red;
-    font-weight: bold;
-
+  color: red;
+  font-weight: bold;
 }
 
 h2 {
-    color: blue;
+  color: blue;
 }
 
 p {
-    color: brown;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: brown;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.red {
+  color: red;
+}
+
+.blue {
+  color: blue;
+}
+
+.big {
+  font-size: 3rem;
 }

@@ -8,5 +8,11 @@ import { Component } from '@angular/core';
   // 'h2 { font-weight: normal; color: blue}']
 })
 export class AppComponent {
-  colors = ["blue", "red", "green", "orange", "red", "blue"]
+  colors = ["blue", "red", "orange"]
+
+  styleFive = {
+    'font-size' : '4px',
+    'background-color' : 'yellow'
+
+  }
 }
